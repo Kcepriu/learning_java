@@ -16,8 +16,6 @@ public class Main {
         }).forEach(movie -> System.out.println(movie.getName()));
 
 
-        
-
 
 
     }
