@@ -10,12 +10,9 @@ public class Main {
                 new Movie("c", 15)
         );
 
-        movies.stream().filter(movie -> {
-            System.out.println("filtered "+movie.getName());
-            return movie.getRate() > 10;
-        }).forEach(movie -> System.out.println(movie.getName()));
-
-
+        System.out.println("");
+        System.out.println("Map");
+        movies.stream().map(Movie::getName).forEach(System.out::println);
 
 
     }

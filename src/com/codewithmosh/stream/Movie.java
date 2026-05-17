@@ -1,6 +1,6 @@
 package com.codewithmosh.stream;
 
-public class Movie {
+public class Movie implements Comparable<Movie> {
     private String name;
     private Integer rate;
 
@@ -16,5 +16,14 @@ public class Movie {
 
     public Integer getRate() {
         return rate;
+    }
+    public String toString() {
+        return "{"+name+": "+rate+"}";
+    }
+
+
+    @Override
+    public int compareTo(Movie other) {
+        return rate - other.getRate();
     }
 }
